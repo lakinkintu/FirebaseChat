@@ -45,7 +45,7 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.ViewHo
             public void onClick(View v) {
 
                 UserDetails.Second_User = userDetailsDatas.get(position).getUserName();
-               /* v.getContext().startActivity(new Intent(v.getContext(), ChatWithLonda.class));*/
+               /* v.getContext().startActivity(new Intent(v.getContext(), ChatWith_.class));*/
                 chatOnItemClickListener.OnItemClickListener(position);
 
             }

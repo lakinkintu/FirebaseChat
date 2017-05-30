@@ -5,10 +5,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
@@ -22,6 +20,7 @@ import java.util.Map;
 import chat.masti.music.firebasechat.Constantvalue.ChatOnItemClickListener;
 import chat.masti.music.firebasechat.Constantvalue.GroupMember;
 import chat.masti.music.firebasechat.Constantvalue.UserDetails;
+import chat.masti.music.firebasechat.newdesign.ScrollingActivity;
 
 public class UserList extends AppCompatActivity {
 
@@ -49,7 +48,7 @@ public class UserList extends AppCompatActivity {
         userListAdapter = new UserListAdapter(userDetailsDatas, new ChatOnItemClickListener() {
             @Override
             public void OnItemClickListener(int position) {
-                Intent intent = new Intent(getApplicationContext(), ChatWithLonda.class);
+                Intent intent = new Intent(getApplicationContext(), ScrollingActivity.class);
                 intent.putExtra("UserName", userDetailsDatas.get(position).getUserName());
                 intent.putExtra("UID", userDetailsDatas.get(position).getUID());
                 startActivity(intent);

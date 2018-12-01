@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="signup">Sign up</string>
+    <string name="haveaccount">Already have an account? Login.</string>
+    <string name="haventaccount">Don\'t have an account? Sign up.</string>
+    <string name="signin">Sign in</string>
+</resources>
